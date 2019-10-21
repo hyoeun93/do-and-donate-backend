@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_09_155942) do
+ActiveRecord::Schema.define(version: 2019_10_21_035931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challengecomments", force: :cascade do |t|
+    t.integer "challenge_id"
+    t.text "content"
+  end
 
   create_table "challenges", force: :cascade do |t|
     t.string "title"
@@ -41,6 +46,14 @@ ActiveRecord::Schema.define(version: 2019_10_09_155942) do
     t.string "donor_img_url"
   end
 
+  create_table "pictures", force: :cascade do |t|
+    t.string "filename"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_challenge_id"
+  end
+
   create_table "user_challenges", force: :cascade do |t|
     t.integer "user_id"
     t.integer "challenge_id"
@@ -48,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_10_09_155942) do
     t.datetime "datetime"
     t.string "photo"
     t.string "title"
+    t.boolean "completed"
   end
 
   create_table "users", force: :cascade do |t|

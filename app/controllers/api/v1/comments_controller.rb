@@ -2,6 +2,7 @@ class Api::V1::CommentsController < ApplicationController
     def create
         @user_challenge = UserChallenge.find(params[:user_challenge_id])
         @comment = @user_challenge.comments.create(comment_params)
+        render json: @comment
     end 
 
     def destroy
