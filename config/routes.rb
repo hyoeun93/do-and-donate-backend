@@ -13,7 +13,7 @@ Rails.application.routes.draw do
         resources :challengecomments, only: [:index, :create]
       end 
 
-      resources :pictures, only: [:create]
+      resources :pictures, only: [:index, :create]
 
       resources :donors, only: [:index]
 

@@ -42,3 +42,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'fast_jsonapi'
+
+gem "aws-sdk-s3", "~> 1.50"
+gem "dotenv-rails", "~> 2.7"
