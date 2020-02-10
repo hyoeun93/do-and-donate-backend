@@ -1,25 +1,16 @@
-# README
+# do-and-donate-backend (D^2)
+Backend codes for D^2 mobile app 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies used
+- Ruby on Rails
+- Postgres SQL 11
+- RESTful API
 
-Things you may want to cover:
+## Frontend
+Application frontend and instructions for setup: [D^2 Frontend](https://github.com/hyoeun93/do-and-donate-frontend)
 
-* Ruby version
+## Instructions
+- rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# do-and-donate-backend
+## Contributors
+- Hyoeun Lee
